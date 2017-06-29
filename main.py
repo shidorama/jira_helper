@@ -25,8 +25,7 @@ def move_dueDate(authed_jira, dry):
             issue.update(
                 fields={
                     'duedate': newdue_str
-                },
-                notify=False
+                }
             )
         print(issue)
 
