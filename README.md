@@ -1,7 +1,7 @@
 # Installation
 
  * We're presuming that you have pip and python 3 installed.
- * ``pip -r requirements.txt``
+ * ``pip install -r requirements.txt``
  * Populate settings.py with login and password
  * Done
  
