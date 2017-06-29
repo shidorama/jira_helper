@@ -64,7 +64,7 @@ def prep_jira():
         }
     }
     try:
-        authed_jira = JIRA(**options_args, max_retries=3)
+        authed_jira = JIRA(max_retries=3, **options_args)
     except Exception as e:
         raise Exception('Unable to connect to jira! %s' % e)
     return authed_jira
