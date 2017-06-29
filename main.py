@@ -15,7 +15,7 @@ def getWorklogMessage():
 
 # Move due date
 def move_dueDate(authed_jira, dry):
-    issues = authed_jira.search_issues('assignee = currentUser() and due <  endOfDay()')
+    issues = authed_jira.search_issues('assignee = currentUser() and due <  endOfDay() and status != Resolved')
     newdue = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=settings.due_date_move_amount_days)
     newdue_str = newdue.strftime('%Y-%m-%d')
     print('There are %s issues in \'due-warning\'!' % len(issues))
