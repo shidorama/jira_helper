@@ -96,5 +96,4 @@ Availible options are:
         )
 
 if __name__ == '__main__':
-    # fire.Fire(main)
-    main(dry=True, worklog=True)
+    fire.Fire(main)
